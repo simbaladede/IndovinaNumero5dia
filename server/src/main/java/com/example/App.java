@@ -5,7 +5,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 /**
- * Hello world!
+ * Hello world! 
  *
  */
 public class App {
@@ -20,7 +20,7 @@ public class App {
                 // apro il socket di ascolto
                 Socket client = serverSocket.accept(); // il codice si ferma e aspetta un client
                 // passo tutto alla classe ThreadGioco
-                ThreadGioco th = new ThreadGioco(client, b, listaClient);
+                ThreadServer th = new ThreadServer(client, b, listaClient);
                 th.start();
             }
         } catch (Exception e) {
