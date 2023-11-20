@@ -46,7 +46,7 @@ public class ThreadGioco extends Thread {
                             daRitornare = "Biglietto acquistato";
                             if (b.getDisponibili() <= 0) {
 
-                                for (Socket socket : listaClient) {
+                                for (Socket socket : listaClient) { // qui fa il broadcast
                                     System.out.println("invio");
                                     DataOutputStream o = new DataOutputStream(socket.getOutputStream());
                                     o.writeBytes("TUTTO ESAURITO!!!!" + "\n");

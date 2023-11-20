@@ -25,8 +25,8 @@ public class App {
             do {
                 System.out.println("fai la scelta");
                 scelta = leggiTastiera.readLine();
-                outVersoServer.writeBytes(scelta+"\n");
                 scelta = scelta.toUpperCase();
+                outVersoServer.writeBytes(scelta+"\n"); 
             } while (!scelta.equals("Q"));
             socket.close();
 
